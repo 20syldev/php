@@ -2,7 +2,7 @@
   <a href="https://php.sylvain.pro"><img src="https://php.sylvain.pro/assets/images/logo.png" alt="Logo" width="25%" height="auto"/></a>
 
   # Mes projets PHP - Site dynamique
-  [![Version](https://custom-icon-badges.demolab.com/badge/Version%20:-v1.0.5-6479ee?logo=php.sylvain.pro&labelColor=23272A)](https://github.com/20syldev/php/releases/latest)
+  [![Version](https://custom-icon-badges.demolab.com/badge/Version%20:-v1.0.6-6479ee?logo=php.sylvain.pro&labelColor=23272A)](https://github.com/20syldev/php/releases/latest)
 </div>
 
 ---
