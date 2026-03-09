@@ -3,18 +3,122 @@
 <head>
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <meta http-equiv="refresh" content="0;url=https://php.sylvain.sh"/>
-    <title>Redirection vers PHP...</title>
-    <link rel="stylesheet" href="https://sylvain.sh/assets/css/bulma.css"/>
-    <link rel="stylesheet" href="https://sylvain.sh/assets/css/index.css"/>
-    <link rel="icon shortcut" href="https://sylvain.sh/assets/images/logo.png"/>
+    <title>PHP - Introuvable</title>
+    <link rel="icon" href="assets/images/logo.png"/>
+    <style>
+        @font-face {
+            font-family: 'Outfit';
+            src: url('assets/fonts/Outfit.woff2') format('woff2');
+            font-display: swap;
+        }
+
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg: oklch(1 0 0);
+            --fg: oklch(0.145 0 0);
+            --muted: oklch(0.556 0 0);
+            --muted-bg: oklch(0.556 0 0 / 30%);
+            --primary: oklch(0.205 0 0);
+            --primary-fg: oklch(0.985 0 0);
+        }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: oklch(0.145 0 0);
+                --fg: oklch(0.985 0 0);
+                --muted: oklch(0.708 0 0);
+                --muted-bg: oklch(0.708 0 0 / 30%);
+                --primary: oklch(0.922 0 0);
+                --primary-fg: oklch(0.205 0 0);
+            }
+        }
+
+        body {
+            color: var(--fg);
+            background: var(--bg);
+            font-family: 'Outfit', system-ui, -apple-system, sans-serif;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            padding: 1rem;
+            min-height: 100dvh;
+        }
+
+        .container {
+            animation: fade-in 0.5s ease forwards;
+            flex-direction: column;
+            align-items: center;
+            display: flex;
+            gap: 1.5rem;
+            opacity: 0;
+        }
+
+        .code {
+            font-size: clamp(6rem, 20vw, 8rem);
+            color: var(--muted-bg);
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        h1 {
+            line-height: 2rem;
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+
+        p {
+            color: var(--muted);
+            line-height: 1.5;
+            max-width: 28rem;
+        }
+
+        a {
+            background: var(--primary);
+            color: var(--primary-fg);
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.2s;
+            gap: 1rem;
+            height: 2.25rem;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            border-radius: 0.5rem;
+            padding: 0.5rem 0.75rem;
+        }
+        a:hover { background: color-mix(in oklch, var(--primary) 90%, transparent); }
+        a svg {
+            stroke-linejoin: round;
+            stroke-linecap: round;
+            stroke: currentColor;
+            fill: none;
+            width: 1rem;
+            height: 1rem;
+            stroke-width: 2;
+        }
+
+        @keyframes fade-in {
+            from { transform: translateY(10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
 </head>
 <body>
-    <section class="section">
-        <div class="section-heading mb-3 description">
-            <h3 class="title is-2 mb-1">Redirection en cours...</h3>
-            <h4 class="subtitle is-5">Si vous n'êtes pas redirigé, cliquez <a href="https://php.sylvain.sh">ici</a>.</h4>
-      </div>
+    <div class="container">
+        <div class="code">404</div>
+        <h1>Page non trouvée</h1>
+        <p>La page que vous recherchez n'existe pas ou a été déplacée.</p>
+        <a href="https://php.sylvain.sh">
+            <svg viewBox="0 0 24 24">
+                <path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/>
+                <path d="M3 10a2 2 0 0 1 .709-1.528l7-6a2 2 0 0 1 2.582 0l7 6A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+            Retour à l'accueil
+        </a>
+    </div>
 </body>
 </html>
